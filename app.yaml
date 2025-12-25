@@ -1,0 +1,12 @@
+runtime: nodejs20
+
+env: standard
+
+entrypoint: serve -s dist -l $PORT
+
+handlers:
+  - url: /.*
+    script: auto
+
+env_variables:
+  NODE_ENV: production
